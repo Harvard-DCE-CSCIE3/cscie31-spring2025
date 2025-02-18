@@ -15,7 +15,7 @@ const server = http.createServer((req, res) => {
 	const { pathname, query } = parsedUrl;
 
 	// protect against Local File Inclusion vulnerability 
-	if (path.normalize(decodeURI(pathname)) !== decodeURI(pathname)) {
+  if (path.normalize(decodeURI(pathname)).replace(/\\/g, '/') !== decodeURI(pathname)) {
 		res.statusCode = 403;
 		res.end();
 		return;
