@@ -2,7 +2,7 @@
 let promise = new Promise(function(resolve, reject){
     setTimeout(function(){
         try{
-          console.log('About to throw an error');
+          //console.log('About to throw an error');
           var str="CSCI E31 MEAN stack";
           let i = str.indexOf("a");
           resolve("I completed successfully! "+ i);
