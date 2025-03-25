@@ -3,7 +3,7 @@
 (async function(){
  
  try{ 
-    let value = await new Promise(function(resolve, reject){
+    let value2 = await new Promise(function(resolve, reject){
         setTimeout(function(){      
           try{
             //clearconsole.log('About to throw an error');
@@ -17,6 +17,8 @@
         }, 1000);
 
     })
+
+    let value = await fetch('url')
     console.log(value);
 
   } catch(e){ 

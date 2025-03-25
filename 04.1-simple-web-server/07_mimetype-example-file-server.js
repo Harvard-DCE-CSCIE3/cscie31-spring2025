@@ -39,7 +39,7 @@ const server = http.createServer((req, res) => {
 	const absolute_path_to_file = path.join(process.cwd(), pathname);
 	console.log('absolute_path_to_file is %s', absolute_path_to_file);
 
-	fs.readFile(absolute_path_to_file, (err, data) => {
+		fs.readFile(absolute_path_to_file, (err, data) => {
 		  if (err) {
 	      console.log(err);
 	      if (err.code == 'ENOENT'){
