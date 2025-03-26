@@ -5,8 +5,8 @@
 
    function testAPIs(){
     // test list first
-    var testId = '';
-    var testJSON = {};
+    let testId = '';
+    let testJSON = {};
 
     // list
     callAPI('GET', '/api/photos', null, null)
@@ -101,7 +101,7 @@
        *      on the object. (an empty 'body' property will cause an error
        *      on a GET request!)
        */
-      var response = await fetch(baseURL + uri, {
+      const response = await fetch(baseURL + uri, {
         method: method, // GET, POST, PUT, DELETE, etc.
         ...(method=='POST' ? {body: body} : {}),
         ...(method=='PUT' ?  {headers: jsonMimeType, body:JSON.stringify(body)} : {})
