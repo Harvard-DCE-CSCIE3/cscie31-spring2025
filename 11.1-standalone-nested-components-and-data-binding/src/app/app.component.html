@@ -1,0 +1,13 @@
+<div class="container">
+    <h1>{{ coursename() }} Photo Gallery</h1>
+    <p>Number of Photos: {{ getNumberOfPhotos() }}</p>
+    
+    <div class="photo-grid">
+        @for (photo of photoList(); track photo._id) {
+            <app-photo 
+                [photo]="photo"
+                (upvoted)="handleUpvoted($event)">
+            </app-photo>
+        }
+    </div>
+</div>

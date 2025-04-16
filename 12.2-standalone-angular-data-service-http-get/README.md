@@ -1,0 +1,3 @@
+# 122AngularDataServiceHTTPGet
+
+This project includes code for the exxamples in Week 12 of CSCI E31. This is Angular 19, and uses 'standalone' components (no app.module.ts required). This example modifies the data service to use HTTP 'get' requests rather than mock data. It only implements get at this point.  The get request is set to fetch from the class photo galllery application. To test with your own data, you'll need to start your Express REST API project (homework #5) and set the URL in environment.ts to point to your localhost REST API URL. 

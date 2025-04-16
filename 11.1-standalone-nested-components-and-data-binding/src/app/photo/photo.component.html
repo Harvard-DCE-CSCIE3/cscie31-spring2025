@@ -1,0 +1,14 @@
+<div class="card-body">
+
+  <img  class="card-img-top"
+        [src]="photo.imageurl"
+        aria-controls="active"
+        style="max-height:300px;max-width:250px;margin-top:20px;"
+        alt="image from photo collection">
+
+  <p class="card-title">{{ photo.title }}</p>
+  <p class="card-text">{{ photo.description }}</p>
+  <p class="card-text">Votes: {{ votes() }} <br>
+    <button (click)="upvote()">Upvote!</button>   
+  </p>
+</div>
